@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: ai_assistant
+server:
+  port: 8123
+  servlet:
+    context-path: /api
+# springdoc-openapi????
+# http://localhost:8123/api/doc.html#/home
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.petrece.ai_assistant.controller
+# knife4j???????????????
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
